@@ -21,6 +21,10 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".ts", ".tsx"] }
+    ],
+    "import/prefer-default-export": "off"
   }
 }
