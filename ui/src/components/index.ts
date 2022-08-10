@@ -1,1 +1,2 @@
-// will export every component
+export { Layout } from './Layout';
+export { Text } from './Text';
