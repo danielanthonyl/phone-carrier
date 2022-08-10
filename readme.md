@@ -2,7 +2,7 @@
 
 This is a Full Stack project made for LolDesign enterprise.
 
-##### Frontend acknowledgements
+#### Frontend acknowledgements
 
 The UI project was launched using Vite. a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
