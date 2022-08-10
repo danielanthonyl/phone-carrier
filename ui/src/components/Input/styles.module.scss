@@ -1,0 +1,62 @@
+@import '../../constants/colors.scss';
+
+$frame_padding: 10px;
+$label_size: 16px;
+$input_size: 70px;
+$input_center: calc($input_size / 2 - $label_size / 2);
+$animation_ms: 200ms;
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputLabel {
+  position: absolute;
+  top: $input_center;
+  left: $frame_padding;
+  font: normal normal 500 $label_size Inter, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+.inputLabelAnimateUp {
+  top: $frame_padding;
+  font: normal normal 500 14px Inter, Avenir, Helvetica, Arial, sans-serif;
+  animation: moveUpOnFocus $animation_ms linear;
+}
+
+.inputLabelAnimateDown {
+  top: $input_center;
+  animation: moveDownOnBlur $animation_ms linear;
+}
+
+.inputComponent {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $black;
+  height: $input_size;
+  width: 265px;
+  padding: $frame_padding;
+  padding-top: 30px;
+  font: normal normal 500 $label_size Inter, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+@keyframes moveUpOnFocus {
+  from {
+    top: $input_center;
+  }
+  to {
+    top: $frame_padding;
+  }
+}
+
+@keyframes moveDownOnBlur {
+  from {
+    top: $frame_padding;
+  }
+  to {
+    top: $input_center;
+  }
+}
