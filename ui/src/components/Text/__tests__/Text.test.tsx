@@ -1,5 +1,5 @@
-import { Text } from '../';
 import { render, RenderResult } from '@testing-library/react';
+import { Text } from '..';
 
 describe('<Text />', () => {
   let wrapper: RenderResult;

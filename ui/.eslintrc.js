@@ -12,6 +12,7 @@ module.exports = {
     'prettier',
   ],
   parserOptions: {
+    project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
     ecmaFeatures: {
       jsx: true,
@@ -28,6 +29,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     // '@typescript-eslint/comma-dangle': 2,
   },
 };
