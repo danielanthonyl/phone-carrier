@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export type TextVariantLibrary =
   | 'caption'
   | 'footnote'
@@ -33,4 +35,5 @@ export interface ITextProps<T> extends React.HTMLAttributes<T> {
   variant?: TextVariantLibrary;
   color?: ColorLibrary;
   weight?: FontWeight;
+  children: ReactNode;
 }

@@ -1,10 +1,13 @@
 import { Text } from '../';
-import { render } from '@testing-library/react';
+import { render, RenderResult } from '@testing-library/react';
 
 describe('<Text />', () => {
-  test('should render correctly', () => {
-    const { container } = render(<Text>Render Text</Text>);
+  let wrapper: RenderResult;
 
-    console.log(container.innerHTML);
+  beforeEach(() => {
+    wrapper = render(<Text>Render Text</Text>);
+  });
+  test('Should render correctly', () => {
+    expect(wrapper.container.innerHTML).toBeTruthy();
   });
 });
