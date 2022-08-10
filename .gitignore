@@ -16,6 +16,7 @@ ui/node_modules
 ui/dist
 ui/dist-ssr
 ui/*.local
+ui/yarn.lock
 
 # Editor directories and files
 ui/.vscode/*

@@ -1,0 +1,63 @@
+@import '../../constants/colors.scss';
+
+/* TYPOGRAPHY */
+.caption {
+  font: normal normal 500 12px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.footnote {
+  font: normal normal 500 14px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.subhead {
+  font: normal normal 500 16px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.callout {
+  font: normal normal 500 26px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.body {
+  font: normal normal 500 28px Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+}
+
+.headline {
+  font: normal normal 500 36px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.largeTitle {
+  font: normal normal 500 48px Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* WEIGHTS */
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  font-weight: 500;
+}
+
+/* COLORS */
+
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.grey {
+  color: $grey;
+}
