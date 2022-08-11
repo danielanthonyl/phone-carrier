@@ -5,7 +5,7 @@ import { Select } from './components/Select';
 
 function App() {
   return (
-    <div style={{ background: 'black' }}>
+    <div style={{ background: 'white' }}>
       <Select
         renderContent={[
           { id: '1', value: 'Fale Mais 30' },
@@ -13,7 +13,7 @@ function App() {
         ]}
       />
       <Input placeholder="hey hey" />
-      <Button title="okeyzson" variant="outline" />
+      <Button title="okeyzson" variant="default" />
       <Layout></Layout>
     </div>
   );
