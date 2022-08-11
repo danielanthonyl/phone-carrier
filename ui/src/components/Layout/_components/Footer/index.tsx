@@ -21,14 +21,17 @@ export const Footer = ({ email, phone }: IFooterProps) => (
       <div className={classes.socialCircle} />
       <div className={classes.socialCircle} />
     </address>
-    <Text color="pureWhite" variant="footnote">
+    <Text className={classes.rights} color="pureWhite" variant="footnote">
       Telzir Empresa Ficticia LTDA @2022. Todo os direitos reservados.
     </Text>
-    <Text color="pureWhite" className={classes.copyrightText} variant="caption">
+    <Text color="grey" className={classes.copyrightText} variant="caption">
       A imagem utilizada a cima não foi licenciada. Não está sendo usdada para
-      fins comerciais e sem intenções de lucro. Créditos e copyright da imagem:{' '}
-      <a className={classes.copyrightLink}>
-        https://wallpaperscraft.com/download/street_night_wet_155637/2560x1024
+      fins comerciais e sem intenções de lucro.
+      <a
+        href="https://wallpaperscraft.com/download/street_night_wet_155637/2560x1024"
+        className={classes.copyrightLink}
+      >
+        click aqui para acessar o dono da imagem.
       </a>
     </Text>
   </footer>
