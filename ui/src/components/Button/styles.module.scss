@@ -1,0 +1,25 @@
+@import '../../constants/measurements.scss';
+@import '../../constants/colors.scss';
+
+.button {
+  height: $input_height;
+  width: 300px;
+  border-radius: $border_radius;
+}
+
+.default {
+  background-color: $black;
+}
+
+.default:hover {
+  background-color: lighten($black, 10%);
+}
+
+.outline {
+  border: 1px solid $pureWhite;
+  background-color: transparent;
+}
+
+.outline:hover {
+  opacity: 50%;
+}
