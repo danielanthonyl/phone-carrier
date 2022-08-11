@@ -37,11 +37,14 @@
 .copyrightText {
   display: flex;
   flex: 2;
+  flex-direction: column;
   text-align: center;
   color: darken($grey, 20%);
+  margin-top: 10px;
 }
 
 .copyrightLink {
+  text-align: center;
   font: normal normal 500 12px Inter, Avenir, Helvetica, Arial, sans-serif;
   color: $grey;
 }

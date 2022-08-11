@@ -1,8 +1,16 @@
 @import '../../constants/colors.scss';
 @import '../../constants/measurements.scss';
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .main {
   display: flex;
-  flex: 10;
+  flex: 1;
+  flex-direction: column;
   padding: 0 $appFrame;
 }
