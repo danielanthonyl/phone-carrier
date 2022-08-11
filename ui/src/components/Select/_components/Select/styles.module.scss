@@ -1,0 +1,25 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.selectComponent {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $black;
+  height: $input_height;
+  width: $input_width;
+  padding: $padding;
+  animation: onFocusOut 200ms linear;
+}
+
+@keyframes onFocusOut {
+  from {
+    background-color: $white;
+  }
+  to {
+    background-color: transparent;
+  }
+}

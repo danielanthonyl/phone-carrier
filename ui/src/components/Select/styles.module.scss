@@ -1,28 +1,9 @@
 @import '../../constants/colors.scss';
 @import '../../constants/measurements.scss';
 
-$frame_padding: 10px;
-$label_size: 16px;
-$input_center: calc($input_width / 2 - $label_size / 2);
-$animation_ms: 200ms;
-
 .selectContainer {
   position: relative;
   width: $input_width;
-}
-
-.selectComponent {
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px solid $black;
-  height: $input_height;
-  width: $input_width;
-  padding: $frame_padding;
-  animation: onFocusOut 200ms linear;
 }
 
 .selectComponentFocused {
@@ -36,14 +17,5 @@ $animation_ms: 200ms;
   }
   to {
     background-color: $white;
-  }
-}
-
-@keyframes onFocusOut {
-  from {
-    background-color: $white;
-  }
-  to {
-    background-color: transparent;
   }
 }
