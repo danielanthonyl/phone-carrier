@@ -51,3 +51,7 @@ yarn eslint-diagnostics
 ```sh
 npm run eslint-diagnostics
 ```
+
+## TODO
+
+[] - Animate Dropdown

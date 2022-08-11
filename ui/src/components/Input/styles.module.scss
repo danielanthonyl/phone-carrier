@@ -1,9 +1,8 @@
 @import '../../constants/colors.scss';
+@import '../../constants/measurements.scss';
 
-$frame_padding: 10px;
 $label_size: 16px;
-$input_size: 70px;
-$input_center: calc($input_size / 2 - $label_size / 2);
+$input_center: calc($input_height / 2 - $label_size / 2);
 $animation_ms: 200ms;
 
 .inputContainer {
@@ -15,13 +14,13 @@ $animation_ms: 200ms;
 .inputLabel {
   position: absolute;
   top: $input_center;
-  left: $frame_padding;
+  left: $padding;
   font: normal normal 500 $label_size Inter, Avenir, Helvetica, Arial,
     sans-serif;
 }
 
 .inputLabelAnimateUp {
-  top: $frame_padding;
+  top: $padding;
   font: normal normal 500 14px Inter, Avenir, Helvetica, Arial, sans-serif;
   animation: moveUpOnFocus $animation_ms linear;
 }
@@ -33,11 +32,11 @@ $animation_ms: 200ms;
 
 .inputComponent {
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: $border_radius;
   border: 1px solid $black;
-  height: $input_size;
-  width: 265px;
-  padding: $frame_padding;
+  height: $input_height;
+  width: $input_width;
+  padding: $padding;
   padding-top: 30px;
   font: normal normal 500 $label_size Inter, Avenir, Helvetica, Arial,
     sans-serif;
@@ -48,13 +47,13 @@ $animation_ms: 200ms;
     top: $input_center;
   }
   to {
-    top: $frame_padding;
+    top: $padding;
   }
 }
 
 @keyframes moveDownOnBlur {
   from {
-    top: $frame_padding;
+    top: $padding;
   }
   to {
     top: $input_center;
