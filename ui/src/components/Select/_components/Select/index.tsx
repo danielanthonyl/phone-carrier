@@ -2,6 +2,7 @@ import { SelectTestIds } from '../../../../enums/TestIdLibrary';
 import { ISelectProps } from './types';
 import classes from './styles.module.scss';
 import { Text } from '../../../Text';
+import { Icon } from '../../../Icon';
 
 export const Select = ({ value, openDropdown, className }: ISelectProps) => (
   <div
@@ -10,7 +11,6 @@ export const Select = ({ value, openDropdown, className }: ISelectProps) => (
     className={`${classes.selectComponent} ${className}`}
   >
     <Text variant="subhead">{value}</Text>
-    {/* TODO: this will be replaced by a SVG icon */}
-    <Text>⌄</Text>
+    <Icon name="ArrowDown" />
   </div>
 );
