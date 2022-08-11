@@ -2,7 +2,7 @@
 
 #### Any source of truth?
 
-#### Todo:
+#### Todo
 [] - unit test (xx%)
 [] - styles (xx%)
 [] - codacy report (xx%)
