@@ -1,6 +1,7 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 import { IInputProps } from './types';
 import classes from './styles.module.scss';
+import { InputTestIds } from '../../enums/TestIdLibrary';
 
 export const Input = ({ placeholder, ...props }: IInputProps) => {
   const [value, setValue] = useState('');
@@ -26,7 +27,7 @@ export const Input = ({ placeholder, ...props }: IInputProps) => {
   return (
     <div className={classes.inputContainer}>
       <label
-        data-testid="input-component__label"
+        data-testid={InputTestIds.label}
         className={`${classes.inputLabel} ${labelAnimatedClass}`}
         htmlFor="inputComponent"
       >
@@ -34,7 +35,7 @@ export const Input = ({ placeholder, ...props }: IInputProps) => {
       </label>
 
       <input
-        data-testid="input-component__input"
+        data-testid={InputTestIds.input}
         name="inputComponent"
         onChange={onChange}
         onBlur={onBlur}

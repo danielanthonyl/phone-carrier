@@ -2,6 +2,7 @@ import { createElement } from 'react';
 import { ITextProps, VariantToNodeMap } from './types';
 
 import classes from './styles.module.scss';
+import { TextTestIds } from '../../enums/TestIdLibrary';
 
 export const Text = <Node,>({
   variant = 'body',
@@ -11,5 +12,6 @@ export const Text = <Node,>({
 }: ITextProps<Node>) =>
   createElement(VariantToNodeMap[variant], {
     className: `${classes[variant]} ${classes[color]} ${classes[weight]}`,
+    'data-testid': TextTestIds.text,
     ...rest,
   });

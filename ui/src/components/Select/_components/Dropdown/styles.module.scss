@@ -1,0 +1,12 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.dropdownComponent {
+  width: $input_width;
+  background-color: $white;
+  position: absolute;
+  border-radius: $border_radius;
+  padding: $padding;
+  z-index: 1;
+  border: 1px solid $black;
+}
