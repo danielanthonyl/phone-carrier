@@ -1,9 +1,10 @@
 import { Text } from '../../../Text';
 import { IFooterProps } from './types';
 import classes from './styles.module.scss';
+import { LayoutTestIds } from '../../../../enums/TestIdLibrary';
 
 export const Footer = ({ email, phone }: IFooterProps) => (
-  <footer className={classes.footer}>
+  <footer data-testid={LayoutTestIds.footer} className={classes.footer}>
     <Text className={classes.logo} color="pureWhite" weight="bold">
       Telzir
     </Text>
