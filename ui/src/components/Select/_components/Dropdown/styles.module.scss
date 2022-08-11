@@ -10,17 +10,3 @@
   z-index: 1;
   border: 1px solid $black;
 }
-
-.optionsList {
-  list-style-type: none;
-}
-
-.option {
-  padding: $padding;
-  border-radius: $border_radius;
-  cursor: pointer;
-}
-
-.option:hover {
-  background-color: darken($white, 6%);
-}

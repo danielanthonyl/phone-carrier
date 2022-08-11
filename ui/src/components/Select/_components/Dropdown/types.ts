@@ -1,9 +1,5 @@
-export interface RenderContent {
-  id: string;
-  value: string;
-}
+import { ISelectProps } from '../../types';
 
-export interface IDropdownProps {
+export interface IDropdownProps extends ISelectProps {
   visible?: boolean;
-  renderContent: RenderContent[];
 }

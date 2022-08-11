@@ -1,0 +1,16 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.optionsList {
+  list-style-type: none;
+}
+
+.option {
+  padding: $padding;
+  border-radius: $border_radius;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: darken($white, 6%);
+}

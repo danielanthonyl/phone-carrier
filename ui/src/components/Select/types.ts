@@ -1,5 +1,9 @@
-import { RenderContent } from './_components/Dropdown/types';
+export type Option = {
+  id: string;
+  value: string;
+};
 
 export interface ISelectProps {
-  renderContent: RenderContent[];
+  renderContent: Option[];
+  onOptionSelect?(option: Option): void;
 }
