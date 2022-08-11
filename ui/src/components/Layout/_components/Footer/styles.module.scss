@@ -1,0 +1,47 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: $black;
+  height: 200px;
+}
+
+.logo {
+  display: flex;
+  margin-top: $padding;
+  flex: 4;
+}
+
+.addressLine {
+  display: flex;
+  flex: 5;
+  gap: 20px;
+}
+
+.socialMedia {
+  display: flex;
+  flex: 6;
+  gap: 15px;
+}
+
+.socialCircle {
+  height: 30px;
+  width: 30px;
+  background-color: $white;
+  border-radius: calc(30px / 2);
+}
+
+.copyrightText {
+  display: flex;
+  flex: 2;
+  text-align: center;
+  color: darken($grey, 20%);
+}
+
+.copyrightLink {
+  font: normal normal 500 12px Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: $grey;
+}

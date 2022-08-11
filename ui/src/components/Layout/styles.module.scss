@@ -1,0 +1,8 @@
+@import '../../constants/colors.scss';
+@import '../../constants/measurements.scss';
+
+.main {
+  display: flex;
+  flex: 10;
+  padding: 0 $appFrame;
+}
