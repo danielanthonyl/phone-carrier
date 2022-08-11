@@ -12,7 +12,7 @@ export const ArrowDown = () => (
       >
         <path
           d="M4 6L8 10L12 6"
-          stroke="white"
+          stroke="#0A0A09"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
