@@ -1,0 +1,21 @@
+@import '../../constants/colors.scss';
+@import '../../constants/measurements.scss';
+
+.selectContainer {
+  position: relative;
+  width: $input_width;
+}
+
+.selectComponentFocused {
+  background-color: $white;
+  animation: onFocus 200ms linear;
+}
+
+@keyframes onFocus {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $white;
+  }
+}
