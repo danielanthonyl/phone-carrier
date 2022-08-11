@@ -11,7 +11,7 @@ export const Text = <Node,>({
   ...rest
 }: ITextProps<Node>) =>
   createElement(VariantToNodeMap[variant], {
-    className: `${classes[variant]} ${classes[color]} ${classes[weight]}`,
-    'data-testid': TextTestIds.text,
     ...rest,
+    'data-testid': TextTestIds.text,
+    className: `${classes[variant]} ${classes[color]} ${classes[weight]} ${rest.className}`,
   });

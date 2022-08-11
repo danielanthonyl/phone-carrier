@@ -13,3 +13,9 @@ export enum SelectTestIds {
 export enum TextTestIds {
   text = 'text-component__text',
 }
+
+export enum LayoutTestIds {
+  header = 'layout-component__header',
+  footer = 'layout-component__footer',
+  main = 'layout-component__main',
+}

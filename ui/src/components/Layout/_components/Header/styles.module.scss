@@ -1,0 +1,11 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.header {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $appFrame;
+  width: 100vw;
+}

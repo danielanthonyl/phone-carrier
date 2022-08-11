@@ -1,0 +1,59 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: $black;
+  height: 300px;
+  padding: $padding $appFrame;
+}
+
+.logo {
+  display: flex;
+  margin-top: $padding;
+  flex: 2;
+}
+
+.addressLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  gap: $padding;
+  margin-bottom: $padding;
+}
+
+.socialMedia {
+  display: flex;
+  flex: 5;
+  gap: 15px;
+}
+
+.socialCircle {
+  height: 30px;
+  width: 30px;
+  background-color: $white;
+  border-radius: calc(30px / 2);
+}
+
+.rights {
+  display: flex;
+  flex: 2;
+  text-align: center;
+}
+
+.copyrightText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.copyrightLink {
+  text-align: center;
+  font: normal normal 500 12px Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: lighten($grey, 80%);
+  line-break: anywhere;
+  margin-top: $padding;
+}
