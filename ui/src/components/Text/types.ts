@@ -19,7 +19,13 @@ export enum VariantToNodeMap {
   largeTitle = 'h3',
 }
 
-export type ColorLibrary = 'red' | 'green' | 'white' | 'grey' | 'black';
+export type ColorLibrary =
+  | 'red'
+  | 'green'
+  | 'white'
+  | 'grey'
+  | 'black'
+  | 'pureWhite';
 
 export enum ColorMap {
   red = 'red',
@@ -27,6 +33,7 @@ export enum ColorMap {
   white = 'white',
   grey = 'grey',
   black = 'black',
+  pureWhite = 'pureWhite',
 }
 
 type FontWeight = 'regular' | 'bold';
