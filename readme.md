@@ -54,4 +54,8 @@ npm run eslint-diagnostics
 
 ## TODO
 
-[] - Animate Dropdown
+### ui
+- [] Animate Dropdown
+- [] Remove nested data
+- [] Add currency masks
+
