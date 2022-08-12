@@ -42,7 +42,7 @@ export interface ITextProps<T> extends React.HTMLAttributes<T> {
   /**
    * @caption 12pt regular Inter
    * @footnote 14pt regular Inter
-   * @suhead 16pt regular Inter
+   * @subhead 16pt regular Inter
    * @callout 26pt regular Inter
    * @body 28pt regular Inter
    * @headline 36pt regular Inter

@@ -8,7 +8,6 @@ describe('<Layout />', () => {
     const renderTestInnerHTML = render(<TestInnerHTML />);
 
     const TestInnerHTMLEmpty = () => null as never as JSX.Element;
-    const renderTestInnerHTMLEmpty = render(<TestInnerHTMLEmpty />);
 
     const wrapper = render(
       <Layout>

@@ -1,10 +1,11 @@
 import { Layout } from './components/Layout';
+import { Router } from './router';
 
 function App() {
   return (
-    <div style={{ background: 'white' }}>
-      <Layout></Layout>
-    </div>
+    <Layout>
+      <Router />
+    </Layout>
   );
 }
 

@@ -1,0 +1,12 @@
+.cards {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cards::after {
+  content: '';
+  flex-basis: 350px;
+}
