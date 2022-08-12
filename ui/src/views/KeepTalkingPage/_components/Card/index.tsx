@@ -52,7 +52,13 @@ export const Card = ({
             R$ {discountDifference}
           </Text>
           <div className={classes.discountPerMinutes}>
-            <Text variant="footnote">R$ {discountPerMinuteWas}</Text>
+            <Text
+              color="grey"
+              className={classes.wasPriceText}
+              variant="footnote"
+            >
+              R$ {discountPerMinuteWas}
+            </Text>
             <Text weight="bold" variant="subhead">
               R$ {discountPerMinuteNow}
             </Text>
