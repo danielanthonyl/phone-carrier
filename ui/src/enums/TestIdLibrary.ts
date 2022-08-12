@@ -19,3 +19,9 @@ export enum LayoutTestIds {
   footer = 'layout-component__footer',
   main = 'layout-component__main',
 }
+
+export enum KeepTalkingPageIds {
+  backgroundImage = 'keep-talking-page__background-image',
+  callToAction = 'keep-talking-page__call-to-action',
+  card = 'keep-talking-page__card',
+}

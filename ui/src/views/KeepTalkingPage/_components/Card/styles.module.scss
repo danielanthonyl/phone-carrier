@@ -1,0 +1,68 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.card {
+  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.3));
+}
+
+.cardHeader {
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  padding: $padding 0;
+}
+
+.cardMainContent {
+  background-color: $white;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  height: 400px;
+}
+
+.wasNowPrice {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wasPriceText {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.thematicBreak {
+  width: 70%;
+  border: 1px solid $grey;
+  opacity: 40%;
+}
+
+.additionalInformations {
+  align-items: center;
+  display: flex;
+  flex: 3;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.discountDifference {
+  align-self: flex-end;
+}
+
+.discountPerMinutes {
+  display: flex;
+  gap: $padding;
+}
+
+.caption {
+  margin: $padding;
+}

@@ -2,10 +2,11 @@
 @import '../../../../constants/measurements.scss';
 
 .header {
+  width: 100%;
+  position: fixed;
   align-items: center;
   background-color: $black;
   display: flex;
   justify-content: space-between;
   padding: 0 $appFrame;
-  width: 100vw;
 }

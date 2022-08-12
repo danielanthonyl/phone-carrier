@@ -1,5 +1,5 @@
 import { Text } from '../Text';
-import styles from './styles.module.scss';
+import classes from './styles.module.scss';
 import { IButtonProps } from './types';
 
 export const Button = ({
@@ -7,7 +7,10 @@ export const Button = ({
   title,
   ...props
 }: IButtonProps) => (
-  <button {...props} className={`${styles.button} ${styles[variant]}`}>
+  <button
+    {...props}
+    className={`${classes.button} ${classes[variant]} ${props.className}`}
+  >
     <Text variant="callout" color="pureWhite">
       {title}
     </Text>

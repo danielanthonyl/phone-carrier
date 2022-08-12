@@ -3,8 +3,18 @@
 
 .button {
   height: $input_height;
-  width: 300px;
+  max-height: $input_height;
+  padding: $padding;
   border-radius: $border_radius;
+  min-width: 300px;
+  max-width: 360px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 .default {

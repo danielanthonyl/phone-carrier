@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(199, 199, 199);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
