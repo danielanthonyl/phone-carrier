@@ -1,30 +1,17 @@
 @import '../../../../constants/colors.scss';
 @import '../../../../constants/measurements.scss';
 
-.card {
-  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.8));
-}
-
-.cardHeader {
-  background-color: $black;
-  display: flex;
-  justify-content: center;
-  padding: $padding 0;
-}
-
-.cardMainContent {
-  background-color: $white;
-  padding: $appFrame $padding;
+.resultContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 380px;
+  justify-content: center;
+  width: 100%;
 }
 
 .wasNowPrice {
   display: flex;
   gap: 30px;
-  flex: 2;
   align-items: center;
 }
 
@@ -32,6 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: $padding;
 }
 
 .wasPriceText {
@@ -43,12 +31,14 @@
   width: 70%;
   border: 1px solid $grey;
   opacity: 40%;
+
+  margin-bottom: calc($padding * 3);
 }
 
 .additionalInformations {
   align-items: center;
   display: flex;
-  flex: 3;
+  flex: 2;
   justify-content: space-between;
   width: 100%;
 }
@@ -63,9 +53,5 @@
 }
 
 .caption {
-  margin-top: $padding;
-}
-
-.assignButton {
-  margin-top: calc($padding * 3);
+  margin: $padding;
 }

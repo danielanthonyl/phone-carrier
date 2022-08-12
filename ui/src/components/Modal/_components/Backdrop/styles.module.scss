@@ -1,0 +1,25 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  // filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  opacity: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // pointer-events: none;
+  // transform: scale(0.4);
+}
+
+.modal {
+  background-color: $white;
+  height: 730px;
+  width: 630px;
+}
