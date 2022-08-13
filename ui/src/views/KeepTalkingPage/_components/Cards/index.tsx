@@ -1,9 +1,9 @@
 import { discountNameToIconNameMap } from '../../_helpers/discountNameMap';
 import { Card } from '../Card';
 import classes from './styles.module.scss';
-import { ICardsProps } from './types';
+import { keepTalkingData } from './_helpers/keepTalkingData';
 
-export const Cards = ({ keepTalkingData = [] }: ICardsProps) => (
+export const Cards = () => (
   <div className={classes.cards}>
     {keepTalkingData.map(({ discountData, discountId, discountName }) => (
       <Card

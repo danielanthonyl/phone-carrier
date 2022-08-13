@@ -1,5 +1,6 @@
-import { Option } from '../../../../../../components/Select/types';
-
-export interface IFormProps {
-  renderContent: Option[];
+export enum FormKeys {
+  origin = 'origin',
+  destiny = 'destiny',
+  minutes = 'minutes',
+  discount = 'discount',
 }
