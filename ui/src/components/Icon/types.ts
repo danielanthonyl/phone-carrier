@@ -2,7 +2,8 @@ export type IconNames =
   | 'KeepTalkingThirty'
   | 'KeepTalkingSixty'
   | 'KeepTalkingAHundredTwenty'
-  | 'ArrowDown';
+  | 'ArrowDown'
+  | 'Close';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: IconNames;
@@ -13,4 +14,5 @@ export enum IconNamesMap {
   KeepTalkingThirty = 'KeepTalkingThirty',
   KeepTalkingSixty = 'KeepTalkingSixty',
   KeepTalkingAHundredTwenty = 'KeepTalkingAHundredTwenty',
+  Close = 'Close',
 }

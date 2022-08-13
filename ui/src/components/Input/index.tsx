@@ -35,13 +35,13 @@ export const Input = ({ placeholder, ...props }: IInputProps) => {
       </label>
 
       <input
+        {...props}
         data-testid={InputTestIds.input}
         name="inputComponent"
         onChange={onChange}
         onBlur={onBlur}
         className={`${classes.inputComponent} ${props.className}`}
         {...{ onFocus }}
-        {...props}
       />
     </div>
   );

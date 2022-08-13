@@ -1,11 +1,15 @@
+import { Provider } from 'react-redux';
 import { Layout } from './components/Layout';
 import { Router } from './router';
+import { store } from './store';
 
 function App() {
   return (
-    <Layout>
-      <Router />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Router />
+      </Layout>
+    </Provider>
   );
 }
 

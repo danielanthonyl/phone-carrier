@@ -1,0 +1,17 @@
+@import '../../../../constants/colors.scss';
+@import '../../../../constants/measurements.scss';
+
+.modal {
+  // height: 700px;
+  // width: 600px;
+  background-color: $white;
+}
+
+.mainContent {
+  padding: $appFrame calc($padding * 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}

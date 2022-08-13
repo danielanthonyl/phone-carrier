@@ -1,0 +1,21 @@
+@import '../../../../../../constants/colors.scss';
+@import '../../../../../../constants/measurements.scss';
+
+.header {
+  background-color: $black;
+  height: $input_height;
+  width: 100%;
+  display: flex;
+  padding: calc($padding * 3);
+  align-items: center;
+}
+
+.title {
+  margin: 0 auto;
+  user-select: none;
+}
+
+.close:active {
+  transform: scale(0.9);
+  cursor: pointer;
+}

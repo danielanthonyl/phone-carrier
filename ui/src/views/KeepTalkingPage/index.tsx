@@ -1,8 +1,9 @@
 import { KeepTalkingPageIds } from '../../enums/TestIdLibrary';
-import classes from './styles.module.scss';
 import { CallToAction } from './_components/CallToAction';
 import { Cards } from './_components/Cards';
-import { keepTalkingData } from './_components/Cards/__mocks__/keepTalkingData';
+import { SimulateNowModal } from './_components/SimulateNowModal';
+
+import classes from './styles.module.scss';
 
 export const KeepTalkingPage = () => (
   <section className={classes.keepTalkingSection}>
@@ -12,8 +13,8 @@ export const KeepTalkingPage = () => (
       alt="Background Image"
       src="/background-image.jpg"
     />
-
     <CallToAction />
-    <Cards keepTalkingData={keepTalkingData} />
+    <Cards />
+    <SimulateNowModal />
   </section>
 );

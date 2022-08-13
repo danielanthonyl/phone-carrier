@@ -1,11 +1,7 @@
-import { IDiscountData } from '../Card/types';
+import { IDiscountData } from '../ResultContent/types';
 
 export interface IKeepTalkingData {
   discountData: IDiscountData;
   discountName: string;
   discountId: string;
-}
-
-export interface ICardsProps {
-  keepTalkingData: IKeepTalkingData[];
 }

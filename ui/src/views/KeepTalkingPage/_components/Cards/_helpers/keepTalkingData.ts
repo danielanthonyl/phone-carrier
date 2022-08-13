@@ -35,5 +35,3 @@ export const keepTalkingData: IKeepTalkingData[] = [
     discountId: '2',
   },
 ];
-
-export const keepTalkingDataEmpty = undefined as never as IKeepTalkingData[];
