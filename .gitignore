@@ -1,6 +1,7 @@
 #backend
 backend/.env
 backend/node_modules/
+backend/coverage
 
 #ui
 # Logs
