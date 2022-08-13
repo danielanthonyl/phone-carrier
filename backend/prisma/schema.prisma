@@ -7,5 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model {
+model KeepTalkingDiscount {
+  id          String @unique
+  name        String @unique
+  maxMinutes  Int
+}
+
+model DistanceDialingCost {
+  id          String @unique
+  origin      String
+  destiny     String
+  cost        Decimal
 }
