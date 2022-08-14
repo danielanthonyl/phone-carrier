@@ -1,7 +1,12 @@
 import { prisma } from '../../prisma';
 import { KeepTalkingDiscountEntity } from '../domain/Entities/KeepTalkingDiscountEntity';
 
-export class KeepTalkingDiscountRepository {
+export interface IKeepTalkingDiscountRepository {
+  createDiscount(data: KeepTalkingDiscountEntity): Promise<KeepTalkingDiscountEntity>;
+  readDiscount(): Promise<KeepTalkingDiscountEntity[]>;
+}
+
+export const KeepTalkingDiscountRepository: IKeepTalkingDiscountRepository = class {
   static async createDiscount(data: KeepTalkingDiscountEntity) {
     const createdData = await prisma.keepTalkingDiscount.create({
       data,
@@ -15,4 +20,4 @@ export class KeepTalkingDiscountRepository {
 
     return discountList;
   }
-}
+};
