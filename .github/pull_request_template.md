@@ -3,11 +3,12 @@
 #### Any source of truth?
 
 #### Todo
-- [ ]  unit tests(xx%)
-- [ ]  styles (xx%)
-- [ ]  codacy report (xx%)
-- [ ]  typescript (xx%)
-- [ ]  logic (xx%)[] - unit test (xx%)
+
+- [ ] unit tests(xx%)
+- [ ] styles (xx%)
+- [ ] codacy report (xx%)
+- [ ] typescript (xx%)
+- [ ] logic (xx%)
 
 ### What are the plans if anything goes wrong?
 

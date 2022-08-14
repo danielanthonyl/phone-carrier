@@ -1,23 +1,16 @@
 import express from 'express';
-import { KeepTalkingDiscountEntity } from './domain/Entities/KeepTalkingDiscountEntity';
+import { distanceDialingCostRouter } from './infrastructure/DistanceDialingCostRouter';
+import { keepTalkingDiscountRouter } from './infrastructure/KeepTalkingDiscountRouter';
 
 const app = express();
 const PORT = 3001;
 const HOST = '0.0.0.0';
 
-const news = new KeepTalkingDiscountEntity({
-  name: 'asd',
-  maxMinutes: 12,
-});
-const news2 = new KeepTalkingDiscountEntity({
-  name: 'asd',
-  maxMinutes: 12,
-});
-
-console.log({ news, news2 });
-
 app.use(express.json());
+app.use(keepTalkingDiscountRouter);
+app.use(distanceDialingCostRouter);
 
 app.listen(PORT, HOST, () => {
+  // eslint-disable-next-line no-console
   console.log(`running at ${HOST}:${PORT}`);
 });
