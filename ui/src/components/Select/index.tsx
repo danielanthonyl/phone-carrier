@@ -8,9 +8,10 @@ export const Select = ({ renderContent, onOptionSelect }: ISelectProps) => {
   const [visible, setVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const clickOutside = useClickOutside(containerRef);
-  const [{ value }, setSelectedOption] = useState(renderContent[0]);
+  const [selectedOption, setSelectedOption] = useState(renderContent[0]);
+  const name = selectedOption?.name;
 
-  const shouldApplyFocusedClass = visible && classes.selectComponentFocused;
+  const shouldApplyFocusedClass = visible ? classes.selectComponentFocused : '';
 
   const openDropdown = () => {
     setVisible(!visible);
@@ -26,14 +27,8 @@ export const Select = ({ renderContent, onOptionSelect }: ISelectProps) => {
 
   return (
     <div ref={containerRef} className={classes.selectContainer}>
-      <DisplaySelect
-        {...{ openDropdown, value }}
-        className={shouldApplyFocusedClass}
-      />
-      <Dropdown
-        {...{ visible, renderContent }}
-        onOptionSelect={optionSelectHandler}
-      />
+      <DisplaySelect {...{ openDropdown, name }} className={shouldApplyFocusedClass} />
+      <Dropdown {...{ visible, renderContent }} onOptionSelect={optionSelectHandler} />
     </div>
   );
 };

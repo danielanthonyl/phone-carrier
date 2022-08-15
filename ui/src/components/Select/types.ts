@@ -1,6 +1,6 @@
 export type Option = {
   id: string;
-  value: string;
+  name: string;
 };
 
 export interface ISelectProps {

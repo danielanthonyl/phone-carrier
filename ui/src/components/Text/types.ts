@@ -1,13 +1,6 @@
 import { ReactNode } from 'react';
 
-export type TextVariantLibrary =
-  | 'caption'
-  | 'footnote'
-  | 'subhead'
-  | 'callout'
-  | 'body'
-  | 'headline'
-  | 'largeTitle';
+export type TextVariantLibrary = 'caption' | 'footnote' | 'subhead' | 'callout' | 'body' | 'headline' | 'largeTitle';
 
 export enum VariantToNodeMap {
   caption = 'p',
@@ -19,13 +12,7 @@ export enum VariantToNodeMap {
   largeTitle = 'h3',
 }
 
-export type ColorLibrary =
-  | 'red'
-  | 'green'
-  | 'white'
-  | 'grey'
-  | 'black'
-  | 'pureWhite';
+export type ColorLibrary = 'red' | 'green' | 'white' | 'grey' | 'black' | 'pureWhite';
 
 export enum ColorMap {
   red = 'red',
