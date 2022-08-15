@@ -4,19 +4,23 @@ This is a Full Stack project made for LolDesign enterprise.
 
 #### Frontend acknowledgements
 
-The UI project was launched using Vite. A build tool that aims to provide a faster and leaner development experience for modern web projects.
-All the componens where built from scratch using SCSS + CSS Modules.
-We use Redux for global state management and useState React Hook for some local stuff.
-We use Jest + React Testing Library for unit and integration tests. (Such painful to make it work well with scss and css modules).
-Strongly typed u.u
+- The UI project was launched using Vite. A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- All the componens where built from scratch using SCSS + CSS Modules.
+- We use Redux for global state management and useState React Hook for some local stuff.
+- We use Jest + React Testing Library for unit and integration tests. (Such painful to make it work well with scss and css modules).
+- Strongly typed u.u
 
 #### Backend acknowledgements
 
-We use Express as REST hosting system.
-[The project aims to be structured using Uncle Bobs Clean Architecutre system](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-It's currently being developed using Postgres as RDBMS, but you can problably integrate with any relational databse.
-Our ORM is Prisma. It connects our project with Postgres
-also, strongly typed c:
+- We use Express as REST hosting system.
+- [The project aims to be structured using Uncle Bobs Clean Architecutre system](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean--architecture.html)
+- It's currently being developed using Postgres as RDBMS, but you can problably integrate with any relational databse.
+- Our ORM is Prisma. It connects our project with Postgres
+- also, strongly typed c:
+
+### Design/brainstorm/prototype
+If you want to see my design prototype and brainstorm file for this project,
+please grab the `.drawio` from the root by downloading it and open on https://app.diagrams.net/
 
 ### Install and run!
 
@@ -175,15 +179,15 @@ If you're in trouble, feel free to reach out to me at any of my socials.
 
 ### ui
 
-- [] Animate Dropdown
-- [] Remove nested data
-- [] Add currency masks
-- [] Add strong validations
-- [] Clean up
-- [] no anys, unknowns or nevers please xd
+- [ ] Animate Dropdown
+- [ ] Remove nested data
+- [ ] Add currency masks
+- [ ] Add strong validations
+- [ ] Clean up
+- [ ] no anys, unknowns or nevers please xd
 
 ### backend
 
-- [] Coverage with unit and integration tests
-- [] Deploy
-- [] Clean up
+- [ ] Coverage with unit and integration tests
+- [ ] Deploy
+- [ ] Clean up
