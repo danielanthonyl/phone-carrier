@@ -6,11 +6,11 @@ import { Option } from '../types';
 const renderContent: Option[] = [
   {
     id: '1',
-    value: 'Test Value 1',
+    name: 'Test Value 1',
   },
   {
     id: '2',
-    value: 'Test Value 2',
+    name: 'Test Value 2',
   },
 ];
 
@@ -30,10 +30,8 @@ describe('<Select />', () => {
   it('Should select an option correctly', () => {
     const selectTextNode = wrapper.getAllByTestId(TextTestIds.text);
 
-    const foundTextNode = selectTextNode.find(
-      (text) => text.innerHTML === renderContent[0].value,
-    );
-    expect(foundTextNode?.innerHTML).toBe(renderContent[0].value);
+    const foundTextNode = selectTextNode.find((text) => text.innerHTML === renderContent[0].name);
+    expect(foundTextNode?.innerHTML).toBe(renderContent[0].name);
 
     const selectNode = wrapper.getByTestId(SelectTestIds.select);
     fireEvent.click(selectNode);
@@ -41,7 +39,7 @@ describe('<Select />', () => {
     const optionNode = wrapper.getAllByTestId(SelectTestIds.option)[1];
     fireEvent.click(optionNode);
 
-    expect(foundTextNode?.innerHTML).toBe(renderContent[1].value);
+    expect(foundTextNode?.innerHTML).toBe(renderContent[1].name);
 
     const dropdown = wrapper.queryByTestId(SelectTestIds.dropdown);
 
