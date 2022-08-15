@@ -5,7 +5,7 @@ import { Option as OptionType } from '../../../types';
 
 const option: OptionType = {
   id: '1',
-  value: 'test value',
+  name: 'test value',
 };
 
 const emptyOption = {
@@ -32,6 +32,6 @@ describe('<Option />', () => {
     fireEvent.click(optionUlNode);
 
     expect(onOptionSelect).toBeCalledWith(option);
-    expect(textNode.innerHTML).toBe(option.value);
+    expect(textNode.innerHTML).toBe(option.name);
   });
 });
