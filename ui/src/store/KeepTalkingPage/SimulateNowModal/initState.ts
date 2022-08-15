@@ -10,5 +10,7 @@ export const initialState: ISimulateNowModalState = {
   },
   controls: {
     visible: false,
+    error: null,
+    loading: false,
   },
 };
