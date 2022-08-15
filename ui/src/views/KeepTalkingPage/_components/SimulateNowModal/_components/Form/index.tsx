@@ -1,61 +1,48 @@
-import { ChangeEvent, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Input, Select } from '../../../../../../components';
-import { Option } from '../../../../../../components/Select/types';
-import { FormKeys } from './types';
+import { FormKeys, IFormProps } from './types';
+import {
+  getKeepTalkingDiscount,
+  IGetKeepTalkingDiscountResponseData,
+} from '../../../../../../services/getKeepTalkingDiscount';
 
 import classes from './styles.module.scss';
-import { updateDiscountDataAsync } from '../../../../../../store/KeepTalkingPage/SimulateNowModal/actions';
-import { useAppDispatch } from '../../../../../../hooks/useAsyncDispatch';
+import { normalizeDiscountName } from '../../../../_helpers/discountNameMap';
 
-export const Form = () => {
-  const dispatch = useAppDispatch();
+export const Form = ({ onInputChange, onOptionSelect, formData }: IFormProps) => {
+  const [renderContent, setRenderContent] = useState<IGetKeepTalkingDiscountResponseData[]>([]);
 
-  const [localForm, setLocalForm] = useState({
-    destiny: {
-      value: '',
-    },
-    minutes: {
-      value: '',
-    },
-    origin: {
-      value: '',
-    },
-    discount: {
-      id: '',
-      value: '',
-    },
-  });
+  // TODO: move this logic to redux
+  useEffect(() => {
+    (async () => {
+      const res = await getKeepTalkingDiscount();
 
-  const onInputChange = (inputData: ChangeEvent<HTMLInputElement>, key: string) => {
-    setLocalForm({ ...localForm, [key]: { value: inputData.target.value } });
-  };
+      if (res.status !== 200) {
+        // TODO: add error handling.
+        return;
+      }
 
-  const onOptionSelect = (option: Option) => {
-    setLocalForm({ ...localForm, discount: option });
+      const { data } = res as { data: IGetKeepTalkingDiscountResponseData[] };
 
-    dispatch(updateDiscountDataAsync({ ...localForm, discount: option }));
-  };
+      const treatedDiscount = data.map((discount) => ({
+        ...discount,
+        name: normalizeDiscountName(discount.name),
+      }));
 
-  // get promotion details and passdown to renderContent
-  const renderContent = [
-    {
-      id: '1',
-      value: 'first',
-    },
-  ];
-
-  // useEffect to push rendercontent value to redux so it displays on Select
+      setRenderContent(treatedDiscount);
+    })();
+  }, []);
 
   return (
     <form className={classes.form}>
       <div className={classes.inputs}>
         <Input
-          value={localForm.origin.value}
+          value={formData.origin.value}
           onChange={(event) => onInputChange(event, FormKeys.origin)}
           placeholder="Origem"
         />
         <Input
-          value={localForm.destiny.value}
+          value={formData.destiny.value}
           onChange={(event) => onInputChange(event, FormKeys.destiny)}
           placeholder="Destino"
         />
@@ -63,7 +50,7 @@ export const Form = () => {
 
       <div className={classes.inputs}>
         <Input
-          value={localForm.minutes.value}
+          value={formData.minutes.value}
           onChange={(event) => onInputChange(event, FormKeys.minutes)}
           placeholder="Tempo"
         />

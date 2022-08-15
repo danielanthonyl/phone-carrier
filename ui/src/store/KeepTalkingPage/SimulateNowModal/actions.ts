@@ -1,10 +1,15 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { getDistanceDialingCost, IGetDistanceDialingCostData } from '../../../services/getDistanceDialingCost';
 import { initialState } from './initState';
 import { ISimulateNowModalState, SetVisiblePayload, IForm, IDiscountData } from './types';
 
 export const setVisible = (state: ISimulateNowModalState, { payload: { visible } }: SetVisiblePayload) => {
-  state.controls.visible = visible;
+  state.controls = {
+    error: null,
+    loading: false,
+    visible,
+  };
 };
 
 export const clearDiscountData = (state: ISimulateNowModalState) => {
@@ -16,20 +21,50 @@ export const updateDiscountData = (state: ISimulateNowModalState, action: Payloa
   state.discountData = action.payload;
 };
 
-export const updateDiscountDataAsync = createAsyncThunk('update-discount-data-async', async (payload: IForm) => {
-  // TODO: pickup payload and pass to backend.
-  payload;
+export const updateDiscountDataReject = (state: ISimulateNowModalState, action: PayloadAction<unknown>) => {
+  // TODO: update reducer with backend income data.
+  const { message } = action.payload as { message: string };
 
-  const fakeBackend = (): IDiscountData => ({
-    discountDifference: 12,
-    discountPerMinuteNow: 12,
-    discountPerMinuteWas: 12,
-    nowPrice: 12,
-    wasPrice: 12,
-  });
+  state.controls = {
+    ...state.controls,
+    error: message,
+    loading: false,
+  };
+};
 
-  return fakeBackend();
-});
+export const updateDiscountDataAsync = createAsyncThunk(
+  'update-discount-data-async',
+  async ({ origin, destiny, minutes, discount }: IForm, { rejectWithValue }) => {
+    const res = await getDistanceDialingCost({
+      origin: origin.value,
+      destiny: destiny.value,
+      minutes: minutes.value,
+      discountId: discount.id,
+    });
+
+    if (res.status !== 200) {
+      return rejectWithValue({
+        message: 'Ainda não temos cobertura para esta combinação de origem e destino.',
+      });
+    }
+
+    const {
+      costWithDiscount,
+      costDifference,
+      costWithoutDiscount,
+      costPerMinuteWithDiscount,
+      costPerMinuteWithoutDiscount,
+    } = res.data as IGetDistanceDialingCostData;
+
+    return {
+      discountDifference: costDifference,
+      discountPerMinuteNow: costPerMinuteWithDiscount,
+      discountPerMinuteWas: costPerMinuteWithoutDiscount,
+      nowPrice: costWithDiscount,
+      wasPrice: costWithoutDiscount,
+    };
+  },
+);
 
 export const actions = {
   setVisible,

@@ -7,6 +7,7 @@ export interface IReadDistanceDialingCostUseCaseReturn {
   costWithDiscount: number;
   costPerMinuteWithoutDiscount: number;
   costPerMinuteWithDiscount: number;
+  costDifference: number;
   id: string;
   origin: string;
   destiny: string;
@@ -50,12 +51,14 @@ export class ReadDistanceDialingCostUseCase implements IReadDistanceDialingCostU
     const costWithoutDiscount = Number(Number(minutes * cost).toFixed(2));
     const costWithDiscount = calculateDiscount <= 0 ? 0 : Number(Number(calculateDiscount).toFixed(2));
     const costPerMinuteWithDiscount = Number(Number(costWithDiscount / minutes).toFixed(2));
+    const costDifference = costWithoutDiscount - costWithDiscount;
 
     return {
       costWithoutDiscount,
       costWithDiscount,
       costPerMinuteWithoutDiscount: cost,
       costPerMinuteWithDiscount,
+      costDifference,
       id: foundDistanceDialingCost.id,
       origin: foundDistanceDialingCost.origin,
       destiny: foundDistanceDialingCost.destiny,

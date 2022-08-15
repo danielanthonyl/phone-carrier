@@ -30,6 +30,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-expressions': 'off',
-    // '@typescript-eslint/comma-dangle': 2,
+    'no-alert': 'off',
+    'consistent-return': 'off',
   },
 };

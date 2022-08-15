@@ -1,5 +1,9 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
+export interface IUpdateDiscountErrorPayload {
+  message: string;
+}
+
 export interface IDiscountData {
   discountDifference: number;
   discountPerMinuteNow: number;
@@ -19,8 +23,8 @@ export interface IForm {
     value: string;
   };
   discount: {
-    id?: string;
-    value: string;
+    id: string;
+    name: string;
   };
 }
 
@@ -34,5 +38,7 @@ export interface ISimulateNowModalState {
   discountData: IDiscountData;
   controls: {
     visible: boolean;
+    error: null | string;
+    loading: boolean;
   };
 }
